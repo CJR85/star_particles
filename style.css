@@ -3,3 +3,33 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #131a1c;
+}
+
+.loader {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader span {
+  position: absolute;
+  transform-origin: 150px;
+  transform: translateX(-150px) rotate(calc(var(--i) * 30deg));
+  filter: drop-shadow(0 0 5px #3cc2ff) drop-shadow(0 0 15px #3cc2ff)
+    drop-shadow(0 0 30px #3cc2ff);
+}
+
+.loader span i {
+  position: relative;
+  color: #3cc2ff;
+}
